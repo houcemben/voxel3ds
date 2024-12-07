@@ -1,80 +1,85 @@
-/* Police personnalisée */
-.no-translate {
-    /* Style optionnel pour les éléments non traduits */
+/* Reset des marges et padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
-@font-face {
-    font-family: 'MontserratBlack';
-    src: url('fonts/Montserrat-Black.ttf') format('truetype');
-}
-
-/* Style général */
+/* Style pour le body */
 body {
-    font-family: 'MontserratBlack', Arial, sans-serif;
-    background-color: #000;
-    color: #fff;
+    background-color: #f4f4f4;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
     height: 100vh;
     margin: 0;
-    text-align: center;
 }
 
-/* Conteneur principal */
+/* Container principal */
 .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    text-align: center;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 600px;
 }
 
-/* Style du texte du logo */
+/* Style pour le logo */
 .logo h1 {
-    font-size: 6rem; /* Taille du mot "VOXEL" */
+    font-size: 3rem;
+    color: #333;
     margin: 0;
-    line-height: 1;
-	color: #fff; /* Blanc pour "VOXEL" */
 }
 
 .logo h2 {
-    font-size: 2rem; /* Taille du mot "STUDIOS" */
+    font-size: 2rem;
+    color: #666;
     margin: 0;
-    line-height: 0.2;
-	color: #FFD700; /* Jaune pour "STUDIOS" */
-	margin-bottom: 60px; /* Augmenter l'espace sous STUDIOS */
 }
 
-/* Conteneur des icônes */
+/* Texte sous le logo */
+p {
+    font-size: 1.2rem;
+    color: #888;
+    margin: 20px 0;
+}
+
+/* Icônes sociales */
 .social-icons {
-    display: flex;
-    justify-content: center;
-    gap: 20px; /* Espacement entre les icônes */
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
-/* Style des liens et des icônes */
 .social-icons a {
     display: inline-block;
-    width: 40px; /* Taille des icônes */
+    margin: 0 10px;
+    transition: transform 0.2s ease;
+}
+
+.social-icons a img {
+    width: 40px;
     height: 40px;
 }
 
-.social-icons img {
-    width: 100%; /* Adapter l'image à la taille du conteneur */
-    height: auto;
-    transition: transform 0.3s ease;
+.social-icons a:hover {
+    transform: scale(1.1);
 }
 
-/* Effet au survol */
-.social-icons a:hover img {
-    transform: scale(1.2); /* Zoom au survol */
+/* Ajout pour le responsive */
+@media (max-width: 768px) {
+    .logo h1 {
+        font-size: 2.5rem;
+    }
+    .logo h2 {
+        font-size: 1.5rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+    .social-icons a img {
+        width: 35px;
+        height: 35px;
+    }
 }
-.social-icons img {
-    filter: none !important; /* Annule les effets du navigateur */
-    display: inline-block;
-    width: 40px; /* Taille des icônes */
-    height: auto;
-}
-
-
